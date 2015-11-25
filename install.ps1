@@ -23,7 +23,9 @@ if ([IO.Directory]::Exists('Emptify'))
 
 # Decompress the zip file
 Add-Type -AssemblyName System.IO.Compression.FileSystem
-[IO.Compression.ZipFile]::ExtractToDirectory('Emptify.zip', 'Emptify')
+$src = [IO.Path]::Combine($pwd.Path, 'Emptify.zip') # Path.GetFullPath is unreliable in PS-- see stackoverflow.com/q/33907574
+$dest = [IO.Path]::Combine($pwd.Path, 'Emptify')
+[IO.Compression.ZipFile]::ExtractToDirectory($src, $dest)
 Remove-Item 'Emptify.zip' # Cleanup after ourselves
 
 # Add ourselves to PATH if not in it

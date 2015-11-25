@@ -10,10 +10,10 @@ $urls = $latest.assets | Select { $_.browser_download_url }
 $amd64 = [Environment]::Is64BitOperatingSystem
 $pattern = ('Win32', 'x64')[$amd64]
 
-$query = $urls | Where { '$_' | Select-String '$pattern' }
+$query = $urls | Where { $_ | Select-String $pattern }
 $url = $query | Select -Index 0
 
-Invoke-WebRequest '$url' -OutFile 'Emptify.zip'
+Invoke-WebRequest $url -OutFile 'Emptify.zip'
 
 # Remove previous installations
 if ([IO.Directory]::Exists('Emptify'))

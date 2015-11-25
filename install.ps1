@@ -31,7 +31,7 @@ Move-Item "Emptify.$pattern" 'Emptify' # Erase architecture info
 Remove-Item 'Emptify.zip' # Cleanup after ourselves
 
 # Add ourselves to PATH if not in it
-Get-Command emptify 2> $null
+Get-Command emptify 2>&1 | Out-Null
 if (-not $?)
 {
     $current = [Environment]::GetEnvironmentVariable('PATH', [EnvironmentVariableTarget]::User)

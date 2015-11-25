@@ -11,7 +11,7 @@ emptify
 Run this from a command prompt:
 
 ```cmd
-powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object Net.WebClient).DownloadString('https://github.com/jamesqo/Emptify/raw/master/install.ps1'))" && set Path=%Path%;%LocalAppData%\Emptify
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object Net.WebClient).DownloadString('https://github.com/jamesqo/Emptify/raw/master/install.ps1'))" && set path=%path%;%LocalAppData%\Emptify
 ```
 
 ## Running on Startup

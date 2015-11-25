@@ -16,7 +16,7 @@ $url = $query | Select -Index 0
 Invoke-WebRequest '$url' -OutFile 'Emptify.zip'
 
 # Remove previous installations
-if ([IO.Directory]::Exists('Emptify')
+if ([IO.Directory]::Exists('Emptify'))
 {
     [IO.Directory]::Delete('Emptify', $true)
 }

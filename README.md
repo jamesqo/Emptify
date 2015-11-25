@@ -26,4 +26,4 @@ This creates a shortcut to Emptify in your computer's Startup folder, so that ev
 
 ## License
 
-Emptify is licensed under the [BSD 2-clause license](bsd.license).
+Emptify is licensed under the [BSD 2-clause license](license.bsd).

@@ -27,7 +27,7 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 Remove-Item 'Emptify.zip' # Cleanup after ourselves
 
 # Add ourselves to PATH if not in it
-Get-Command emptify | Out-Null
+Get-Command emptify 2> $null
 if (-not $?)
 {
     $current = [Environment]::GetEnvironmentVariable('PATH', [EnvironmentVariableTarget]::User)

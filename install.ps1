@@ -16,15 +16,15 @@ $url = $query | Select -Index 0
 Invoke-WebRequest $url.browser_download_url -OutFile 'Emptify.zip'
 
 # Remove previous installations
-if ([IO.Directory]::Exists('Emptify'))
+$src = [IO.Path]::Combine($pwd.Path, 'Emptify.zip') # Path.GetFullPath is unreliable in PS-- see stackoverflow.com/q/33907574
+$dest = [IO.Path]::Combine($pwd.Path, 'Emptify')
+if ([IO.Directory]::Exists($dest))
 {
-    [IO.Directory]::Delete('Emptify', $true)
+    [IO.Directory]::Delete($dest, $true)
 }
 
 # Decompress the zip file
 Add-Type -AssemblyName System.IO.Compression.FileSystem
-$src = [IO.Path]::Combine($pwd.Path, 'Emptify.zip') # Path.GetFullPath is unreliable in PS-- see stackoverflow.com/q/33907574
-$dest = [IO.Path]::Combine($pwd.Path, 'Emptify')
 [IO.Compression.ZipFile]::ExtractToDirectory($src, $dest)
 Remove-Item 'Emptify.zip' # Cleanup after ourselves
 
@@ -33,11 +33,8 @@ Get-Command emptify 2> $null
 if (-not $?)
 {
     $current = [Environment]::GetEnvironmentVariable('PATH', [EnvironmentVariableTarget]::User)
-    $addend = [IO.Path]::Combine($pwd.Path, 'Emptify')
-    if (-not $current.EndsWith(';'))
-    {
-        $addend = ';' + $addend
-    }
-    $combined = $current + $addend
-    [Environment]::SetEnvironmentVariable('PATH', $combined, [EnvironmentVariableTarget]::User)
+    $corrupt = $current.EndsWith(';')
+    $suffix = (';' + $dest, $dest)[$corrupt]
+    $new = $current + $suffix
+    [Environment]::SetEnvironmentVariable('PATH', $new, [EnvironmentVariableTarget]::User)
 }

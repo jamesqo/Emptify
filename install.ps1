@@ -4,7 +4,7 @@ cd ~/AppData/Local
 $response = Invoke-WebRequest 'https://api.github.com/repos/jamesqo/Emptify/releases'
 $releases = $response.Content | ConvertFrom-Json
 $latest = $releases[0]
-$urls = $latest.assets | Select { $_.browser_download_url }
+$urls = $latest.assets | Select browser_download_url
 
 # Download x64 binaries if on 64-bit
 $amd64 = [Environment]::Is64BitOperatingSystem
@@ -13,7 +13,7 @@ $pattern = ('Win32', 'x64')[$amd64]
 $query = $urls | Where { $_ | Select-String $pattern }
 $url = $query | Select -Index 0
 
-Invoke-WebRequest $url -OutFile 'Emptify.zip'
+Invoke-WebRequest $url.browser_download_url -OutFile 'Emptify.zip'
 
 # Remove previous installations
 if ([IO.Directory]::Exists('Emptify'))

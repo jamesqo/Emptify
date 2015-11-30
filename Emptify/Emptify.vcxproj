@@ -154,10 +154,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="RealMain.cpp" />
+    <ClCompile Include="StringConversions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="main.hpp" />
+    <ClInclude Include="Defer.hpp" />
+    <ClInclude Include="Option.hpp" />
+    <ClInclude Include="RealMain.hpp" />
+    <ClInclude Include="StringConversions.hpp" />
+    <ClInclude Include="StringOperations.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

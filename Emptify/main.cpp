@@ -1,16 +1,6 @@
-#include "main.hpp"
+#include "RealMain.hpp"
 
-int main()
+int main(int argc, char* argv[])
 {
-	auto result = SHEmptyRecycleBinW(
-		nullptr,
-		nullptr,
-		SHERB_NOCONFIRMATION |
-		SHERB_NOPROGRESSUI |
-		SHERB_NOSOUND);
-
-	if (result == E_UNEXPECTED) // already empty
-		return 0;
-
-	return result;
+    return emptify::RealMain(argc, argv);
 }

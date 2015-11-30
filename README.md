@@ -11,7 +11,7 @@ emptify
 Run this from a command prompt:
 
 ```cmd
-@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object Net.WebClient).DownloadString('https://github.com/jamesqo/Emptify/raw/master/install.ps1'))"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object Net.WebClient).DownloadString('https://github.com/jamesqo/Emptify/raw/master/install.ps1'))" && set path=%path%;%LocalAppData%\Emptify
 ```
 
 ## Running on Startup
@@ -26,4 +26,4 @@ This creates a shortcut to Emptify in your computer's Startup folder, so that ev
 
 ## License
 
-Emptify is licensed under the [BSD 2-clause license](bsd.license).
+Emptify is licensed under the [BSD 2-clause license](license.bsd).

@@ -168,7 +168,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
-  <Target Name="AfterBuild">
+  <Target Name="AfterBuild" Condition="'$(Configuration)'=='Release'">
     <ItemGroup>
       <Clutter Include="$(OutDir)*" Exclude="$(OutDir)*.exe;$(OutDir)*.dll" />
     </ItemGroup>

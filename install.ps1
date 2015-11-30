@@ -36,6 +36,6 @@ if (-not $?)
 {
     $current = [Environment]::GetEnvironmentVariable('PATH', [EnvironmentVariableTarget]::User)
     $hassemi = $current.EndsWith(';') # Don't add a ; to PATH if it already ends in one
-    $newvalue = ("$current;$dest", $current$dest)[$hassemi]
+    $newvalue = ("$current;$dest", "$current$dest")[$hassemi]
     [Environment]::SetEnvironmentVariable('PATH', $newvalue, [EnvironmentVariableTarget]::User)
 }

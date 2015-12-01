@@ -6,6 +6,10 @@ A CLI script that empties the Recycle Bin. To use:
 emptify
 ```
 
+## Screenshot
+
+![Animation](http://i.imgur.com/IlUO4iQ.gifv)
+
 ## Installation
 
 Run this from a command prompt:

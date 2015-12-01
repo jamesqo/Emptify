@@ -1,14 +1,12 @@
 # Emptify
 
+[![AppVeyor](https://ci.appveyor.com/api/projects/status/github/jamesqo/Stall?branch=master&svg=true)](https://ci.appveyor.com/project/jamesqo/Stall)
+
 A CLI script that empties the Recycle Bin. To use:
 
 ```cmd
 emptify
 ```
-
-## Screenshot
-
-<img src="http://i.imgur.com/IlUO4iQ.gif" width="70%"/>
 
 ## Installation
 
@@ -27,6 +25,10 @@ emptify --on-startup
 ```
 
 This creates a shortcut to Emptify in your computer's Startup folder, so that every time you turn it on your bin will automatically be cleared.
+
+## In Action
+
+<img src="http://i.imgur.com/IlUO4iQ.gif" width="67%"/>
 
 ## License
 

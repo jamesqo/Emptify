@@ -8,7 +8,7 @@ emptify
 
 ## Screenshot
 
-![Animation](http://i.imgur.com/IlUO4iQ.gifv)
+<img src="http://i.imgur.com/IlUO4iQ.gif" width="70%"/>
 
 ## Installation
 

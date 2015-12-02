@@ -1,6 +1,6 @@
 # Emptify
 
-<img src="https://cdn.rawgit.com/jamesqo/Emptify/master/icons/icon.svg" width="35%"/>
+<img src="https://cdn.rawgit.com/jamesqo/Emptify/master/icons/icon.svg" width="30%"/>
 
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/jamesqo/Stall?branch=master&svg=true)](https://ci.appveyor.com/project/jamesqo/Stall)
 

@@ -1,5 +1,7 @@
 # Emptify
 
+![Logo](icons/icon.svg)
+
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/jamesqo/Stall?branch=master&svg=true)](https://ci.appveyor.com/project/jamesqo/Stall)
 
 A CLI script that empties the Recycle Bin. To use:

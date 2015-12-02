@@ -30,7 +30,7 @@ This creates a shortcut to Emptify in your computer's Startup folder, so that ev
 
 ## Contributing
 
-Emptify is an open-source project. Feel free to make pull requests or file bug reports if you have an issue.
+Contributors are welcome! Please feel free to make pull requests or report bugs to this repo.
 
 ## License
 

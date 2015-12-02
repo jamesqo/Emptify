@@ -260,3 +260,6 @@ _Pvt_Extensions
 
 # C++ filter files
 *.filters
+
+# Icon cache files
+Thumbs.db

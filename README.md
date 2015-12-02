@@ -28,9 +28,9 @@ emptify --on-startup
 
 This creates a shortcut to Emptify in your computer's Startup folder, so that every time you turn it on your bin will automatically be cleared.
 
-## In Action
+## Contributing
 
-<img src="http://i.imgur.com/IlUO4iQ.gif" width="67%"/>
+Emptify is an open-source project. Feel free to make pull requests or file bug reports if you have an issue.
 
 ## License
 

@@ -1,6 +1,6 @@
 # Emptify
 
-![Logo](icons/icon.svg)
+<object data="icons/icon.svg" type="image/svg+xml"/>
 
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/jamesqo/Stall?branch=master&svg=true)](https://ci.appveyor.com/project/jamesqo/Stall)
 

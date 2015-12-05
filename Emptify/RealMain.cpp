@@ -115,7 +115,7 @@ or
 
         std::ofstream out(there);
         out << "[InternetShortcut]" << std::endl;
-        out << "URL=file:///" << replace<std::string>(here, "\\", "/");
+        out << "URL=file:///" << replace(here, std::string("\\"), std::string("/"));
         
         return 0;
     }

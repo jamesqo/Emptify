@@ -34,8 +34,8 @@ ri 'Emptify.zip' # Cleanup after ourselves
 gcm emptify 2>&1 | Out-Null
 if (-not $?)
 {
-    $current = [Environment]::GetEnvironmentVariable('PATH', [EnvironmentVariableTarget]::User)
+    $current = [Environment]::GetEnvironmentVariable('PATH', 'User')
     $hassemi = $current.EndsWith(';') # Don't add a ; to PATH if it already ends in one
     $newvalue = ("$current;$dest", "$current$dest")[$hassemi]
-    [Environment]::SetEnvironmentVariable('PATH', $newvalue, [EnvironmentVariableTarget]::User)
+    [Environment]::SetEnvironmentVariable('PATH', $newvalue, 'User')
 }
